@@ -1,0 +1,54 @@
+# Telegram Bot Configuration
+telegram:
+  token: "YOUR_BOT_TOKEN_HERE"      # Получить от @BotFather в Telegram
+  chat_id: 123456789                # Ваш Chat ID
+
+# Monitor Settings
+monitor:
+  check_intervals: [5, 10, 15, 30]  # Интервалы проверки в минутах
+
+# Servers Configuration
+servers:
+  - name: "Server 1"
+    host: "192.168.1.100"
+    port: 22
+    user: "root"
+    ssh_key: "/root/.ssh/id_rsa"    # Или используйте password
+    password: ""                      # Если нет ssh_key
+    
+  - name: "Server 2"
+    host: "192.168.1.101"
+    port: 22
+    user: "root"
+    ssh_key: "/root/.ssh/id_rsa"
+    password: ""
+    
+  - name: "Server 3"
+    host: "192.168.1.102"
+    port: 22
+    user: "root"
+    ssh_key: "/root/.ssh/id_rsa"
+    password: ""
+    
+  - name: "Server 4"
+    host: "192.168.1.103"
+    port: 22
+    user: "root"
+    ssh_key: "/root/.ssh/id_rsa"
+    password: ""
+
+# Xray Configuration
+xray:
+  port: 10085                        # Стандартный порт 3x-ui
+  check_process: true                # Проверять процесс Xray
+  
+# Network Monitoring
+network:
+  ping_host: "8.8.8.8"              # Host для проверки пинга
+  ping_count: 4                      # Количество пингов
+
+# Alert Thresholds
+alerts:
+  cpu_threshold: 80                  # % CPU
+  memory_threshold: 85               # % RAM
+  disk_threshold: 90                 # % диска
