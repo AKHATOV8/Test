@@ -1,0 +1,16 @@
+[Unit]
+Description=Server Monitor Telegram Bot
+After=network.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/opt/server-monitor
+ExecStart=/opt/server-monitor/server-monitor
+Restart=on-failure
+RestartSec=10
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target
